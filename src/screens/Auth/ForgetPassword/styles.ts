@@ -10,15 +10,15 @@ const styles = StyleSheet.create({
   container: {
     height: getHeight(100),
     width: getWidth(100),
-    flex: 1,
+
     alignItems: "center",
     backgroundColor: theme.background.primary,
     // marginTop: getHeight(8),
     // justifyContent: "center",
   },
   backArrow: {
-    width: getWidth(14),
-    height: getHeight(7),
+    width: getWidth(12),
+    height: getHeight(6),
     borderWidth: 1,
     borderColor: theme.border.secondary,
     borderRadius: 10,
@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
   imageStyle: {
     resizeMode: "contain",
     alignSelf: "center",
-    width: getWidth(8),
-    height: getHeight(4),
+    width: getWidth(6),
+    height: getHeight(3),
   },
   backArrowMainView: {
     width: getWidth(100),
@@ -73,6 +73,10 @@ const styles = StyleSheet.create({
   },
   textInputView: {
     marginTop: getHeight(4),
+    width: getWidth(90),
+  },
+  SecondaryButtonView: {
+    top: getHeight(3),
   },
 });
 export default styles;

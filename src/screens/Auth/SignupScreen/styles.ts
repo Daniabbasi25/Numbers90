@@ -15,14 +15,16 @@ const styles = StyleSheet.create({
     color: theme.text.heading,
     fontSize: 25,
     fontWeight: "700",
+    bottom: getHeight(2),
   },
   textView: {
     alignItems: "flex-start",
-    bottom: "3%",
-    width: getWidth(90),
+    // bottom: "3%",
+    width: getWidth(80),
+    marginTop: getHeight(3),
   },
   orRegisterwithView: {
-    width: getWidth(90),
+    width: getWidth(80),
     height: getHeight(6),
     flexDirection: "row",
     justifyContent: "space-between",
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
   dividerView: {
     borderStartColor: theme.text.label,
     borderWidth: 0.5,
-    width: getWidth(30),
+    width: getWidth(25),
   },
   orRegisterwithText: {
     fontSize: 12,
@@ -43,18 +45,22 @@ const styles = StyleSheet.create({
   SocialButton: {
     flexDirection: "row",
     justifyContent: "space-evenly",
-    width: getWidth(90),
+    width: getWidth(80),
   },
   belowTextView: {
     flexDirection: "row",
     top: getHeight(4),
     alignItems: "center",
+    alignSelf: "center",
   },
   loginText: {
     fontSize: 12,
     fontWeight: "600",
     textDecorationLine: "underline",
     marginHorizontal: 2,
+  },
+  SecondaryButtonView: {
+    marginVertical: getHeight(2),
   },
 });
 export default styles;

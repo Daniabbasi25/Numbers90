@@ -9,7 +9,7 @@ const theme = AppliedTheme();
 const styles = StyleSheet.create({
   screenContainer: {
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
     flex: 1,
   },
   HeadingText: {
@@ -19,11 +19,11 @@ const styles = StyleSheet.create({
   },
   textView: {
     alignItems: "flex-start",
-    bottom: "3%",
-    width: getWidth(90),
+    marginTop: "20%",
+    width: getWidth(80),
   },
   forgetPasswordView: {
-    width: getWidth(90),
+    width: getWidth(80),
     height: getHeight(6),
   },
   forgetPasswordText: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     color: theme.text.label,
   },
   orRegisterwithView: {
-    width: getWidth(90),
+    width: getWidth(80),
     height: getHeight(6),
     flexDirection: "row",
     justifyContent: "space-between",
@@ -44,7 +44,11 @@ const styles = StyleSheet.create({
   dividerView: {
     borderStartColor: theme.text.label,
     borderWidth: 0.5,
-    width: getWidth(30),
+    width: getWidth(25),
+  },
+  textInputView: {
+    marginVertical: getHeight(3),
+    alignItems: "center",
   },
   orRegisterwithText: {
     fontSize: 12,
@@ -54,7 +58,7 @@ const styles = StyleSheet.create({
   SocialButton: {
     flexDirection: "row",
     justifyContent: "space-evenly",
-    width: getWidth(90),
+    width: getWidth(80),
   },
   belowTextView: {
     flexDirection: "row",
@@ -70,9 +74,9 @@ const styles = StyleSheet.create({
 
   TopPlayButtonView: {
     width: getWidth(100),
-    height: getHeight(10),
+    height: getHeight(8),
     backgroundColor: theme.background.neutral,
-    bottom: getHeight(10),
+    // bottom: getHeight(13),
     justifyContent: "center",
     overflow: "hidden",
     zIndex: 999,

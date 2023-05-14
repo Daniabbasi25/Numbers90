@@ -1,47 +1,48 @@
 /** @format */
 
-import { StyleSheet } from "react-native";
-import { AppliedTheme } from "@constants";
-import { getWidth, getHeight } from "@helpers";
-const theme = AppliedTheme();
+import { StyleSheet } from 'react-native'
+import { AppliedTheme } from '@constants'
+import { getWidth, getHeight } from '@helpers'
+const theme = AppliedTheme()
 const styles = StyleSheet.create({
   CardView: {
     width: getWidth(70),
-    height: getHeight(55),
-    borderWidth: 2,
+    height: getHeight(60),
+    borderWidth: 0,
     borderColor: theme.background.secondary,
     borderRadius: 16,
-    alignSelf: "center",
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden",
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center'
+    // backgroundColor: 'red'
+    // overflow: 'hidden'
   },
   InactiveSlide: {
     transform: [{ scale: 0.8 }],
-    opacity: 0.7,
+    opacity: 0.7
   },
   CarouselStyle: {
-    alignContent: "center",
-    alignItems: "center",
-    // width: getWidth(150),
+    alignContent: 'center',
+    alignItems: 'center'
+    // width: getWidth(150)
   },
   inactiveDotStyle: {
     width: 20,
     height: 20,
-    borderRadius: 10,
+    borderRadius: 10
   },
   dotStyle: {
     width: 10,
     height: 10,
     borderRadius: 5,
     marginHorizontal: 1,
-    backgroundColor: theme.background.secondary,
+    backgroundColor: theme.background.secondary
   },
   imageStyle: {
-    resizeMode: "center",
+    resizeMode: 'center',
     width: getWidth(70),
-    height: getHeight(55),
-  },
-});
+    height: getHeight(70)
+  }
+})
 
-export default styles;
+export default styles

@@ -1,3 +1,5 @@
+/** @format */
+
 import {
   StyleSheet,
   Text,
@@ -8,28 +10,45 @@ import {
   TextInputProps,
   GestureResponderEvent,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
-import React, { FC } from 'react'
-import styles from './styles'
+import React, { FC } from "react";
+import styles from "./styles";
 import { AppliedTheme } from "@constants";
 
- interface Props extends TextInputProps {
-   name: string;
-   label: string;
-   placeholder: string;
-   rightIcon?: boolean;
-   icon?: any;
-   onPress?: (event: GestureResponderEvent) => void;
- }
-const theme=AppliedTheme()
+interface Props extends TextInputProps {
+  name: string;
+  label: string;
+  placeholder: string;
+  rightIcon?: boolean;
+  icon?: any;
+  width?: any;
+  height?: any;
+  onPress?: (event: GestureResponderEvent) => void;
+}
+const theme = AppliedTheme();
 const TextInput: FC<Props> = (Props) => {
-  const { label, name, placeholder, rightIcon, icon, onPress, ...otherProps } =
-    Props;
+  const {
+    label,
+    name,
+    placeholder,
+    rightIcon,
+    width,
+    height,
+    icon,
+    onPress,
+    ...otherProps
+  } = Props;
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label} </Text>
-      <View style={styles.textField}>
+      <View
+        style={
+          width || height
+            ? [styles.textField, { width: width, height: height }]
+            : styles.textField
+        }
+      >
         <InputText
           style={[styles.inputStyle, { width: rightIcon ? "90%" : "100%" }]}
           placeholder={placeholder}
@@ -46,6 +65,4 @@ const TextInput: FC<Props> = (Props) => {
   );
 };
 
-export default TextInput
-
- 
+export default TextInput;

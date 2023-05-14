@@ -6,6 +6,7 @@ import styles from "./styles";
 import { AppliedTheme } from "@constants";
 import { TextInput, SecondaryButton } from "@components";
 import { images } from "@assets";
+import { getHeight, getWidth } from "@helpers";
 const theme = AppliedTheme();
 const ResetPasswordScreen: FC = ({ navigation }) => {
   const [showPassword, setShowPassword] = useState<boolean>(true);
@@ -33,6 +34,8 @@ const ResetPasswordScreen: FC = ({ navigation }) => {
           rightIcon={true}
           onPress={() => setShowPassword(!showPassword)}
           icon={showPassword ? images.closeEye : images.openEye}
+          width={getWidth(90)}
+          height={getHeight(7)}
         />
         <TextInput
           label="Confirm new password"
@@ -42,8 +45,17 @@ const ResetPasswordScreen: FC = ({ navigation }) => {
           rightIcon={true}
           onPress={() => setShowPassword(!showPassword)}
           icon={showPassword ? images.closeEye : images.openEye}
+          width={getWidth(90)}
+          height={getHeight(7)}
         />
-        <SecondaryButton title="Reset password" onPress={handleResetPassword} />
+      </View>
+      <View style={styles.secondaryButtonView}>
+        <SecondaryButton
+          title="Reset password"
+          onPress={handleResetPassword}
+          width={getWidth(90)}
+          height={getHeight(7)}
+        />
       </View>
     </View>
   );

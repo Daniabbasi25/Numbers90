@@ -7,7 +7,7 @@ const theme = AppliedTheme();
 const styles = StyleSheet.create({
   container: {
     width: getWidth(80),
-    height: getHeight(9),
+    height: getHeight(8),
     flexDirection: "row",
     justifyContent: "space-between",
   },

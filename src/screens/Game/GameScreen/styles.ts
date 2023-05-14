@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
 
     elevation: 1,
     paddingHorizontal: getWidth(5),
-    borderRadius: 24
+    borderRadius: 24,
+    paddingVertical: 5
   },
   calculationtext: {
     fontWeight: '500',

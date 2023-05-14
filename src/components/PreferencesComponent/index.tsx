@@ -13,7 +13,7 @@ interface Props {
   leftIcon?: any;
   rightButton?: any;
   rightIcon?: any;
-  rightOnPress: void;
+  rightOnPress?: any;
 }
 const PreferencesComponent: FC<Props> = (props) => {
   const [isToggleOn, setIsToggleOn] = useState<boolean>(true);
@@ -46,7 +46,7 @@ const PreferencesComponent: FC<Props> = (props) => {
         <View style={styles.toggleButtonView}>
           <ToggleSwitch
             isOn={isToggleOn}
-            onColor={theme.background.secondary}
+            onColor={theme.button.primary}
             offColor={theme.border.secondary}
             size="medium"
             onToggle={handleToggle}
