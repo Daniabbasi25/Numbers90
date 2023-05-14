@@ -6,6 +6,7 @@ import styles from "./styles";
 import { AppliedTheme } from "@constants";
 import { TextInput, SecondaryButton } from "@components";
 import { images } from "@assets";
+import { getHeight, getWidth } from "@helpers";
 const theme = AppliedTheme();
 const ForgetPassword: FC = ({ navigation }) => {
   const handleLogin = () => {
@@ -32,8 +33,17 @@ const ForgetPassword: FC = ({ navigation }) => {
           label="Email address"
           placeholder="Enter your email address"
           placeholderTextColor={theme.text.label}
+          width={getWidth(90)}
+          height={getHeight(7)}
         />
-        <SecondaryButton title="Send code" onPress={handleOtpScreen} />
+        <View style={styles.SecondaryButtonView}>
+          <SecondaryButton
+            title="Send code"
+            onPress={handleOtpScreen}
+            width={getWidth(90)}
+            height={getHeight(7)}
+          />
+        </View>
       </View>
       <View style={styles.belowTextView}>
         <Text style={styles.rememberText}>Remember password?</Text>

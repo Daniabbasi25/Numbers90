@@ -2,6 +2,7 @@
 
 import { StyleSheet } from "react-native";
 import { AppliedTheme } from "@constants";
+import { getHeight } from "@helpers";
 
 const theme = AppliedTheme();
 const styles = StyleSheet.create({
@@ -19,7 +20,10 @@ const styles = StyleSheet.create({
   },
   textView: {
     alignItems: "center",
-    bottom: "18%",
+    bottom: "15%",
+  },
+  ButtonMainView: {
+    top: getHeight(5),
   },
 });
 export default styles;

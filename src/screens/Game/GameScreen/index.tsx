@@ -28,13 +28,21 @@ const GameScreen = () => {
           />
           <Text style={styles.headerText}>30</Text>
         </View>
-        <TouchableOpacity style={[styles.row, styles.buttonHint]}>
+        <TouchableOpacity
+          style={[
+            styles.row,
+            styles.buttonHint,
+            {
+              justifyContent: 'space-between'
+            }
+          ]}
+        >
           <Image
             source={images.hint}
             style={{
-              width: getWidth(10),
-              height: getHeight(5),
-
+              width: getWidth(5),
+              height: getHeight(4),
+              // backgroundColor: 'red',
               resizeMode: 'center'
             }}
           />

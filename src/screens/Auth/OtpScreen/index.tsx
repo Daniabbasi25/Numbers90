@@ -13,6 +13,7 @@ import styles from "./styles";
 import { AppliedTheme } from "@constants";
 import { SecondaryButton } from "@components";
 import { images } from "@assets";
+import { getWidth, getHeight } from "@helpers";
 const theme = AppliedTheme();
 
 interface State {
@@ -82,7 +83,12 @@ const OtpScreen: FC = ({ navigation }) => {
             onChangeText={(text) => handleInputChange(text, "num4")}
           />
         </View>
-        <SecondaryButton title="Verify" onPress={handleVerify} />
+        <SecondaryButton
+          title="Verify"
+          onPress={handleVerify}
+          width={getWidth(90)}
+          height={getHeight(7)}
+        />
       </View>
       <View style={styles.belowTextView}>
         <Text style={styles.rememberText}>Send code again</Text>

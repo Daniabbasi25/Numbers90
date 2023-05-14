@@ -62,7 +62,9 @@ const SignupScreen: FC = ({ navigation }) => {
         // onPress={() => setShowPassword(!showPassword)}
         // secureTextEntry={showPassword}
       />
-      <SecondaryButton title="Sign up" />
+      <View style={styles.SecondaryButtonView}>
+        <SecondaryButton title="Sign up" />
+      </View>
       <View style={styles.orRegisterwithView}>
         <View style={styles.dividerView} />
         <Text style={styles.orRegisterwithText}>Or Register with</Text>

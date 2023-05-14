@@ -1,7 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { HomeScreen, LeaderBoardScreen, LoginScreen } from '@screens'
+import {
+  ExpansionPackScreen,
+  HomeScreen,
+  LeaderBoardScreen,
+  LoginScreen,
+  PreferencesScreen
+} from '@screens'
 import { Expansion, HomeIon, LeaderIon, Setting } from '@assets'
 import { AppliedTheme } from '@constants'
 const Tab = createBottomTabNavigator()
@@ -39,7 +45,7 @@ const UserBottomTabs = () => {
       />
       <Tab.Screen
         name='Expansion'
-        component={LoginScreen}
+        component={ExpansionPackScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Expansion fill={color} width={size} height={size} />
@@ -48,7 +54,7 @@ const UserBottomTabs = () => {
       />
       <Tab.Screen
         name='Settings'
-        component={LoginScreen}
+        component={PreferencesScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Setting fill={color} width={size} height={size} />

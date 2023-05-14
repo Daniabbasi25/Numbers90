@@ -7,8 +7,8 @@ import { AppliedTheme } from "@constants";
 const theme = AppliedTheme();
 const styles = StyleSheet.create({
   container: {
-    width: getWidth(70),
-    height: getHeight(9),
+    width: getWidth(60),
+    height: getHeight(7),
     backgroundColor: theme.background.neutral,
     borderRadius: 8,
     borderWidth: 1,

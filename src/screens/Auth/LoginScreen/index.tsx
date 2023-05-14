@@ -1,6 +1,5 @@
 /** @format */
 
-
 import {
   StyleSheet,
   Text,
@@ -51,64 +50,60 @@ const LoginScreen: FC = ({ navigation }) => {
       <View style={styles.textView}>
         <Text style={styles.HeadingText}>Log in</Text>
       </View>
+      <View style={styles.textInputView}>
+        <TextInput
+          label="Email address"
+          name="email"
+          placeholder="example@gmail.com"
+          value={email}
+          onChangeText={(value) => {
+            setEmail(value);
+          }}
+          keyboardType="email-address"
+        />
+        <TextInput
+          label="Password"
+          name="Password"
+          placeholder="must be 8 characters"
+          value={password}
+          onChangeText={(value) => {
+            setPassword(value);
+          }}
+          rightIcon={true}
+          icon={showPassword ? images.closeEye : images.openEye}
+          onPress={() => setShowPassword(!showPassword)}
+          secureTextEntry={showPassword}
+        />
 
-
-
-      <TextInput
-        label='Email'
-        name='email'
-        placeholder='example@gmail.com'
-        value={email}
-        onChangeText={value => {
-          setEmail(value)
-        }}
-        keyboardType='email-address'
-      />
-      <TextInput
-
-        label="Password"
-        name="Password"
-        placeholder="must be 8 characters"
-
-        value={password}
-        onChangeText={value => {
-          setPassword(value)
-        }}
-        rightIcon={true}
-        icon={showPassword ? images.closeEye : images.openEye}
-        onPress={() => setShowPassword(!showPassword)}
-        secureTextEntry={showPassword}
-      />
-
-      <TouchableOpacity
-        style={styles.forgetPasswordView}
-        onPress={ForgetPassword}
-      >
-        <Text style={styles.forgetPasswordText}>Forgot password?</Text>
-      </TouchableOpacity>
-      <SecondaryButton title="Login" />
-      <View style={styles.orRegisterwithView}>
-        <View style={styles.dividerView} />
-        <Text style={styles.orRegisterwithText}>Or Login with</Text>
-        <View style={styles.dividerView} />
-      </View>
-      <View style={styles.SocialButton}>
-        <PrimaryButton width={20} image={images.faceBook} />
-        <PrimaryButton width={20} image={images.google} />
-        {Platform.OS === "ios" && (
-          <PrimaryButton width={20} image={images.apple} />
-        )}
-      </View>
-
-      <View style={styles.belowTextView}>
-        <Text style={styles.orRegisterwithText}>Don’t have an account?</Text>
-        <TouchableOpacity onPress={handleSignup}>
-          <Text style={styles.loginText}>Sign up</Text>
+        <TouchableOpacity
+          style={styles.forgetPasswordView}
+          onPress={ForgetPassword}
+        >
+          <Text style={styles.forgetPasswordText}>Forgot password?</Text>
         </TouchableOpacity>
+        <SecondaryButton title="Login" />
+        <View style={styles.orRegisterwithView}>
+          <View style={styles.dividerView} />
+          <Text style={styles.orRegisterwithText}>Or Login with</Text>
+          <View style={styles.dividerView} />
+        </View>
+        <View style={styles.SocialButton}>
+          <PrimaryButton width={20} height={10} image={images.faceBook} />
+          <PrimaryButton width={20} height={10} image={images.google} />
+          {Platform.OS === "ios" && (
+            <PrimaryButton width={20} height={10} image={images.apple} />
+          )}
+        </View>
+
+        <View style={styles.belowTextView}>
+          <Text style={styles.orRegisterwithText}>Don’t have an account?</Text>
+          <TouchableOpacity onPress={handleSignup}>
+            <Text style={styles.loginText}>Sign up</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-
     </FullScreenPrimary>
-  )
-}
+  );
+};
 
-export default LoginScreen
+export default LoginScreen;

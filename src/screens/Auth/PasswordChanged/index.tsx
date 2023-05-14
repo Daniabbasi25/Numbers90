@@ -6,6 +6,7 @@ import styles from "./styles";
 import { AppliedTheme } from "@constants";
 import { TextInput, SecondaryButton } from "@components";
 import { images } from "@assets";
+import { getWidth, getHeight } from "@helpers";
 const theme = AppliedTheme();
 const PasswordChanged: FC = ({ navigation }) => {
   const handleBackTologin = () => {
@@ -21,7 +22,12 @@ const PasswordChanged: FC = ({ navigation }) => {
         </Text>
       </View>
       <View style={styles.SecondaryButtonView}>
-        <SecondaryButton title="Back to login" onPress={handleBackTologin} />
+        <SecondaryButton
+          title="Back to login"
+          onPress={handleBackTologin}
+          width={getWidth(90)}
+          height={getHeight(7)}
+        />
       </View>
     </View>
   );

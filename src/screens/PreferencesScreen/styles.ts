@@ -9,12 +9,15 @@ const styles = StyleSheet.create({
   container: {
     width: getWidth(100),
     height: getHeight(100),
-    justifyContent: "center",
+    // justifyContent: "center",
     alignItems: "center",
   },
   Heading: {
     color: theme.text.heading,
     fontSize: 28,
+  },
+  subView: {
+    marginTop: getHeight(5),
   },
 });
 export default styles;
